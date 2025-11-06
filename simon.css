@@ -1,0 +1,110 @@
+.boxes {
+    width: 30%;
+    height: 300px;
+    margin-left: 35%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    /* border: 2px solid black; */
+}
+
+h1,
+h3 {
+    text-align: center;
+}
+
+.box {
+    height: 130px;
+    width: 130px;
+    border: 6px solid black;
+    border-radius: 20px;
+}
+
+.red {
+    background-color: red;
+  
+}
+.animation{
+    animation: Animate 250ms linear 0ms 1 normal backwards;
+}
+.LosingAnimation{
+    animation: LosingAnimation 1000ms linear 0ms 1 normal backwards;
+}
+
+.green {
+    background-color: green;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.yellow {
+    background-color: yellow
+}
+@keyframes Animate{
+    0%{
+        /* background-color: green; */
+    }
+     20%{
+        background-color: white;
+        border:6px solid purple;
+    }
+    80%{
+        background-color: white;
+        border:6px solid green;
+    }
+    100%{
+        /* background-color: green; */
+    }
+
+}
+@keyframes LosingAnimation{
+    0%{
+        background-color: white;
+    }
+    16%{
+        background-color: red;
+    }
+    32%{
+        background-color: white ;
+    }
+    49%{
+        background-color: red;
+    }
+    63%{
+        background-color: white;
+    }
+    81%{
+        background-color: red;
+    }
+    100%{
+        background-color: white;
+    }
+}
+
+.bt
+{
+    position: relative;
+    top:50px;
+    display: flex;
+    justify-content: center;
+}
+.start{
+width: 10rem;
+font-size: 2rem;
+padding:0.5rem;
+border-radius: 10px;
+border: 1px solid black
+}
+.result{
+    position: relative;
+    top:100px;
+    height: 100px;
+    width: 100vw;
+    font-size: 45px;
+    color: rgb(85, 0, 82);
+    text-align: center;
+}
