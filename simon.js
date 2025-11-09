@@ -92,7 +92,7 @@ function inp() {
     }
 
     if (storeArr.length === arr.length) {
-        result.innerText = `congratultions you won level ${level}`
+        result.innerText = `congratulations you won level ${level}`
         level += 1;
         score += 1;
         h3.innerText = `Level ${level}`;

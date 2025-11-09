@@ -1,13 +1,23 @@
+body{
+    margin: 0px;
+}
 .boxes {
     width: 30%;
-    height: 300px;
+    height: clamp(150px,20vw,300px);
     margin-left: 35%;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 40px;
     /* border: 2px solid black; */
+    gap: 10px;
+}
+
+.row {
+    height: 45%;
+    gap: 20px;
+
+    display: flex;
 }
 
 h1,
@@ -16,20 +26,24 @@ h3 {
 }
 
 .box {
-    height: 130px;
-    width: 130px;
-    border: 6px solid black;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    /* height: 100px;
+    width: 100px; */
+    border: 5px solid black;
     border-radius: 20px;
 }
 
 .red {
     background-color: red;
-  
+
 }
-.animation{
+
+.animation {
     animation: Animate 250ms linear 0ms 1 normal backwards;
 }
-.LosingAnimation{
+
+.LosingAnimation {
     animation: LosingAnimation 1000ms linear 0ms 1 normal backwards;
 }
 
@@ -44,67 +58,91 @@ h3 {
 .yellow {
     background-color: yellow
 }
-@keyframes Animate{
-    0%{
+
+@keyframes Animate {
+    0% {
         /* background-color: green; */
     }
-     20%{
+
+    20% {
         background-color: white;
-        border:6px solid purple;
+        border: 6px solid purple;
     }
-    80%{
+
+    80% {
         background-color: white;
-        border:6px solid green;
+        border: 6px solid green;
     }
-    100%{
+
+    100% {
         /* background-color: green; */
     }
 
 }
-@keyframes LosingAnimation{
-    0%{
+
+@keyframes LosingAnimation {
+    0% {
         background-color: white;
     }
-    16%{
+
+    16% {
         background-color: red;
     }
-    32%{
-        background-color: white ;
-    }
-    49%{
-        background-color: red;
-    }
-    63%{
+
+    32% {
         background-color: white;
     }
-    81%{
+
+    49% {
         background-color: red;
     }
-    100%{
+
+    63% {
+        background-color: white;
+    }
+
+    81% {
+        background-color: red;
+    }
+
+    100% {
         background-color: white;
     }
 }
 
-.bt
-{
+.bt {
     position: relative;
-    top:50px;
+    top: 20px;
     display: flex;
     justify-content: center;
 }
-.start{
-width: 10rem;
-font-size: 2rem;
-padding:0.5rem;
-border-radius: 10px;
-border: 1px solid black
+
+.start {
+    width: 8rem;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+    border: 1px solid black
 }
-.result{
+
+.result {
     position: relative;
-    top:100px;
+    top: 50px;
     height: 100px;
-    width: 100vw;
+    width: 98vw;
+    /* margin-left:1vw; */
     font-size: 45px;
     color: rgb(85, 0, 82);
     text-align: center;
+}
+/* responsive */
+@media (max-width:280px){
+h1{
+    font-size: 1.5em;
+}
+.start{
+    width:6rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
 }
