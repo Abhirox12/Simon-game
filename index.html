@@ -11,6 +11,30 @@
 <body>
     <h1>Simon Game</h1>
     <h3>Level 1</h3>
+    <div class="dialogboxes">
+        <div class="dialogbox win">
+            <p><b>Congrats</b>
+                <br>
+                <br>
+                You Won this Level
+            </p>
+            <div class="dialogbuttons">
+                <button class="dialog-red  " onclick="reset()">Exit</button>
+                <button class="dialog-green" onclick="nextlevel()"> Next Level</button>
+            </div>
+        </div>
+        <div class="dialogbox lose">
+            <p><b>Sorry!</b>
+                <br>
+                <br>
+                You lost this game
+            </p>
+            <div class="dialogbuttons">
+                <button class="dialog-red" onclick="exit()">Exit</button>
+                <button class="dialog-green " onclick="restart()">Try Again</button>
+            </div>
+        </div>
+    </div>
     <div class="boxes">
         <div class="row">
             <button class="box red"></button>
@@ -27,7 +51,7 @@
     </div>
     <audio src="audios/clicksound.wav" class="clicksound" preload="auto"></audio>
     <audio src="audios/gameover.wav" class="gameoversound" preload="auto"></audio>
-    <audio src="audios/winning sound.wav" class="Winningsound"></audio>
+    <audio src="audios/winning-sound.wav" class="Winningsound"></audio>
     <div class="result">
     </div>
     <script src="simon.js"></script>

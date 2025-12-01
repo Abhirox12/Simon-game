@@ -1,9 +1,10 @@
-body{
+body {
     margin: 0px;
 }
+
 .boxes {
     width: 30%;
-    height: clamp(150px,20vw,300px);
+    height: clamp(150px, 20vw, 300px);
     margin-left: 35%;
     display: flex;
     flex-direction: column;
@@ -135,14 +136,72 @@ h3 {
     color: rgb(85, 0, 82);
     text-align: center;
 }
+
 /* responsive */
-@media (max-width:280px){
-h1{
-    font-size: 1.5em;
+@media (max-width:280px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .start {
+        width: 6rem;
+        font-size: 1rem;
+        font-weight: 600;
+    }
 }
-.start{
-    width:6rem;
-    font-size: 1rem;
+
+.dialogboxes {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+}
+
+.dialogbox {
+    padding-bottom: 20px;
+    width: 20%;
+    aspect-ratio: 3/2;
+    background-color: cadetblue;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.6rem;
+    flex-direction: column;
+    animation: Show 2s ease 1 ;
+}
+
+.dialogbox p {
+    text-align: center;
+}
+
+.dialogbuttons {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dialogbuttons button {
     font-weight: 600;
+    width: 35%;
+    border-radius: 5px;
+    border: 0px solid;
+    aspect-ratio: 5/2;
 }
+
+.dialog-red {
+    background-color: darkred;
+    color: whitesmoke;
+}
+
+.dialog-green {
+    background-color: darkgreen;
+    color: whitesmoke;
+}
+@keyframes Show{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity:1;
+    }
 }
